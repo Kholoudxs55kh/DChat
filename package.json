@@ -17,6 +17,7 @@
     "@typescript-eslint/parser": "^8.23.0",
     "expo": "~52.0.31",
     "expo-status-bar": "~2.0.1",
+    "gun": "^0.2020.1240",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.7",
