@@ -1,20 +1,39 @@
-const HOME_URL = 'http://localhost:3000';
+const HOME_URL = "http://localhost:3000";
 
-export const encryptMessgae = async (message: string) => {
+export const encryptMessage = async (message: string): Promise<string> => {
   try {
-    console.log('Encrypting message:', message);
-    const res = await fetch(HOME_URL + '/encrypt', {
-      method: 'POST',
+    const response = await fetch(`${HOME_URL}/encrypt`, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ message }),
     });
-    if (res.ok) {
-      const data = await res.json();
-      return data.encryptedRSA;
-    }
+
+    const data = await response.json();
+    return data.encryptedRSA;
   } catch (error) {
-    console.error(error);
+    console.error("Encryption failed:", error);
+    throw error;
+  }
+};
+
+export const decryptMessage = async (
+  encryptedMessage: string
+): Promise<string> => {
+  try {
+    const response = await fetch(`${HOME_URL}/decrypt`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ encryptedMessage }),
+    });
+
+    const data = await response.json();
+    return data.decryptedMessage;
+  } catch (error) {
+    console.error("Decryption failed:", error);
+    throw error;
   }
 };
