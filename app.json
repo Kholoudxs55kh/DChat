@@ -23,6 +23,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "FIREBASE_API_KEY":"AIzaSyBMTSrNfcCkulT0N19nBUIReLmQWF_faE8",
+      "FIREBASE_AUTH_DOMAIN":"dchat-4a91c.firebaseapp.com",
+      "FIREBASE_PROJECT_ID":"dchat-4a91c",
+      "FIREBASE_STORAGE_BUCKET":"dchat-4a91c.firebasestorage.app",
+      "FIREBASE_MESSAGING_SENDER_ID":"454538035635",
+      "FIREBASE_APP_ID":"1:454538035635:web:91c16731b21b45d92f4bc6",
+      "FIREBASE_MEASUREMENT_ID":"G-GH72VYLB9F"
     }
   }
 }
