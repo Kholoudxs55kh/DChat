@@ -13,7 +13,7 @@ import { styles } from "./styles/chat";
 import { User } from "firebase/auth";
 import { useAuth } from "./utils/auth";
 
-export const HOME_URL = "http://localhost:3000";
+export const HOME_URL = "http://localhost:8081";
 
 const gun = Gun([HOME_URL + "/gun"]);
 

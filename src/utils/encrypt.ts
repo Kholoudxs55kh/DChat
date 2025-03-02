@@ -1,4 +1,4 @@
-const HOME_URL = "http://localhost:3000";
+const HOME_URL = "http://localhost:8081";
 
 export const encryptMessage = async (message: string): Promise<string> => {
   try {
